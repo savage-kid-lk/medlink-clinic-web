@@ -434,7 +434,7 @@ nav ul li a:hover {
 
 .experts-grid {
     display: grid;
-    grid-template-columns: repeat(6, minmax(200px, 1fr));
+    grid-template-columns: repeat(5, minmax(200px, 1fr));
     gap: 20px;
 }
 
@@ -571,7 +571,8 @@ iframe {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background-color: #007bff; /* default, overridden below */
+    background-color: #007bff;
+    /* default, overridden below */
     color: white;
     font-size: 24px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
@@ -742,9 +743,71 @@ nav ul li a:hover {
 /* ============================================= */
 
 /* Tablets and smaller desktops */
-@media (max-width: 1024px) {
+@media (max-width: 1199px) {
+
+
+    .fas.fa-house {
+        display: block;
+    }
+
+    .fas.fa-user {
+        display: block;
+    }
+
+    .fas.fa-briefcase-medical {
+        display: block;
+    }
+
+    .fas.fa-envelope {
+        display: block;
+    }
+
+
     .contact-btn {
         display: none;
+    }
+
+    /* Show menu logo (hamburger) */
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 320px;
+        height: 100vh;
+        background-color: var(--white);
+        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.15);
+        padding: 40px 25px;
+        transition: right 0.35s ease-in-out;
+        z-index: 999;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    nav.active {
+        right: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    nav ul li {
+        margin: 0;
+
+        width: 100%;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+        padding: 10px 0;
     }
 
     .services-grid {
@@ -787,6 +850,7 @@ nav ul li a:hover {
     }
 }
 
+
 /* Tablets */
 @media (max-width: 768px) {
 
@@ -802,24 +866,8 @@ nav ul li a:hover {
     }
 
     .experts-grid {
-        grid-template-columns: repeat(4, 1fr) !important;
+        grid-template-columns: repeat(3, 1fr) !important;
         gap: 20px;
-    }
-
-    .fas.fa-house {
-        display: block;
-    }
-
-    .fas.fa-user {
-        display: block;
-    }
-
-    .fas.fa-briefcase-medical {
-        display: block;
-    }
-
-    .fas.fa-envelope {
-        display: block;
     }
 
     .header-content {
@@ -974,6 +1022,18 @@ nav ul li a:hover {
 }
 
 /* Mobile phones */
+@media (max-width: 680px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px;
+    }
+
+    .experts-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 1px;
+    }
+}
+
 @media (max-width: 480px) {
     .services-grid {
         grid-template-columns: repeat(1, 1fr) !important;
@@ -1198,6 +1258,8 @@ nav ul li a:hover {
         font-size: 20px;
     }
 }
+
+
 
 /* High-resolution displays */
 @media (-webkit-min-device-pixel-ratio: 2),
