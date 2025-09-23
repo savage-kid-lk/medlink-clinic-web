@@ -227,7 +227,8 @@ nav ul li a:hover {
 }
 
 /* About & Why We Exist Sections */
-.about, .why-exist {
+.about,
+.why-exist {
     padding: 100px 0;
     background-color: #f9f9f9;
 }
@@ -273,25 +274,30 @@ nav ul li a:hover {
     flex-direction: row-reverse;
 }
 
-.about-text, .why-text {
+.about-text,
+.why-text {
     flex: 1;
 }
 
-.about-text h3, .why-text h3 {
+.about-text h3,
+.why-text h3 {
     font-size: 24px;
     color: var(--dark-blue);
     margin-bottom: 20px;
 }
 
-.about-text p, .why-text p {
+.about-text p,
+.why-text p {
     margin-bottom: 20px;
 }
 
-.about-image, .why-image {
+.about-image,
+.why-image {
     flex: 1;
 }
 
-.about-image img, .why-image img {
+.about-image img,
+.why-image img {
     width: 100%;
     border-radius: 8px;
     object-fit: cover;
@@ -299,7 +305,9 @@ nav ul li a:hover {
 
 /* Responsive */
 @media (max-width: 768px) {
-    .about-content, .about-content.reverse {
+
+    .about-content,
+    .about-content.reverse {
         flex-direction: column;
         gap: 30px;
     }
@@ -921,6 +929,10 @@ footer {
         border-radius: 8px;
         display: block;
         margin: 0 auto;
+    }
+
+    body {
+        font-size: medium;
     }
 
 }
