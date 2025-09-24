@@ -155,7 +155,6 @@ nav ul li a:hover {
     position: relative;
     overflow: hidden;
     height: 100vh;
-    /* fullscreen hero */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -196,8 +195,6 @@ nav ul li a:hover {
     100% {
         transform: translateX(-50%);
     }
-
-    /* move half track for seamless loop */
 }
 
 /* overlay so text is readable */
@@ -322,8 +319,11 @@ nav ul li a:hover {
 .about-content {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 50px;
     flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .about-content.reverse {
@@ -345,17 +345,22 @@ nav ul li a:hover {
 .about-text p,
 .why-text p {
     margin-bottom: 20px;
+    max-width: 900px;
 }
 
 .about-image,
 .why-image {
     flex: 1;
+    max-width: 400px;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 8px;
 }
 
 .about-image img,
 .why-image img {
     width: 100%;
-    border-radius: 8px;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -614,15 +619,12 @@ iframe {
     height: 60px;
     border-radius: 50%;
     background-color: #007bff;
-    /* default */
     color: white;
     font-size: 24px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     text-decoration: none;
     transition: transform 0.3s;
     z-index: 1000;
-
-    /* Flexbox centering */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -642,7 +644,6 @@ iframe {
 .floating-top {
     bottom: 160px;
     background-color: #6f42c1;
-    /* Purple for distinction */
 }
 
 /* Hover effect */
@@ -817,7 +818,6 @@ nav ul li a:hover {
         display: none;
     }
 
-    /* Show menu logo (hamburger) */
     .mobile-menu-btn {
         display: block;
     }
